@@ -93,12 +93,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="ddsermo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="创建版本库123git init             # 将当前目录变成git可以管理的版本库git add              # 将文件添加到仓库git commit -m &quot;描述&quot;  # 把文件提交到仓库 12git status      # 查看仓库当前的状态git diff 文件名 # 查看文件修改的内容 版本回退12345git log">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git命令">
+<meta property="og:url" content="http://yoursite.com/2017/08/13/git/index.html">
 <meta property="og:site_name" content="ddsermo">
+<meta property="og:description" content="创建版本库123git init             # 将当前目录变成git可以管理的版本库git add              # 将文件添加到仓库git commit -m &quot;描述&quot;  # 把文件提交到仓库 12git status      # 查看仓库当前的状态git diff 文件名 # 查看文件修改的内容 版本回退12345git log">
+<meta property="og:updated_time" content="2017-08-13T14:28:27.549Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ddsermo">
+<meta name="twitter:title" content="git命令">
+<meta name="twitter:description" content="创建版本库123git init             # 将当前目录变成git可以管理的版本库git add              # 将文件添加到仓库git commit -m &quot;描述&quot;  # 把文件提交到仓库 12git status      # 查看仓库当前的状态git diff 文件名 # 查看文件修改的内容 版本回退12345git log">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/13/git/"/>
 
 
 
 
 
-  <title>ddsermo</title>
+  <title>git命令 | ddsermo</title>
   
 
 
@@ -157,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -270,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/13/git/" itemprop="url">git命令</a></h1>
+          <h1 class="post-title" itemprop="name headline">git命令</h1>
         
 
         <div class="post-meta">
@@ -319,9 +319,7 @@
       
 
       
-        
-          
-            <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git init             <span class="comment"># 将当前目录变成git可以管理的版本库</span></div><div class="line">git add              <span class="comment"># 将文件添加到仓库</span></div><div class="line">git commit -m <span class="string">"描述"</span>  <span class="comment"># 把文件提交到仓库</span></div></pre></td></tr></table></figure>
+        <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git init             <span class="comment"># 将当前目录变成git可以管理的版本库</span></div><div class="line">git add              <span class="comment"># 将文件添加到仓库</span></div><div class="line">git commit -m <span class="string">"描述"</span>  <span class="comment"># 把文件提交到仓库</span></div></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git status      <span class="comment"># 查看仓库当前的状态</span></div><div class="line">git diff 文件名 <span class="comment"># 查看文件修改的内容</span></div></pre></td></tr></table></figure>
 <h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span>                     <span class="comment">#查看提交日志</span></div><div class="line">git reset --hard HEAD^      <span class="comment">#回退到上一个版本</span></div><div class="line">git reset --hard HEAD~100   <span class="comment">#回退到前100个版本</span></div><div class="line">git reflog                  <span class="comment">#查看命令历史</span></div><div class="line">git reset --hard commit_id  <span class="comment">#回到commit_id版本</span></div></pre></td></tr></table></figure>
 <h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -- 文件名    <span class="comment">#可以丢弃工作区的修改</span></div></pre></td></tr></table></figure>
@@ -331,20 +329,27 @@
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">git checkout -b &lt;name&gt;   <span class="comment">#创建并切换分支</span></div><div class="line">git branch  &lt;name&gt;       <span class="comment">#创建分支</span></div><div class="line">git checkout &lt;name&gt;      <span class="comment">#切换分支</span></div><div class="line">git branch               <span class="comment">#列出所有分支，当前分支前有个*号</span></div><div class="line">git merge &lt;name&gt;         <span class="comment">#合并指定分支到当前分支</span></div><div class="line">git branch -d &lt;name&gt;     <span class="comment">#删除分支</span></div><div class="line">git branch -D &lt;name&gt;     <span class="comment">#强制删除</span></div><div class="line">git merge --no-ff &lt;name&gt; <span class="comment">#普通模式合并，合并后的历史有分支</span></div><div class="line">git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit   <span class="comment">#查看分支合并图</span></div><div class="line">git stash  <span class="comment">#将当前工作保存</span></div><div class="line">git stash list <span class="comment">#查看工作存储列表</span></div><div class="line">git stash apply <span class="comment">#恢复</span></div><div class="line">git stash drop <span class="comment">#删除</span></div><div class="line">git stash pop <span class="comment">#恢复的同时删除stash</span></div><div class="line"></div><div class="line">git remote <span class="comment">#查看远程库信息</span></div><div class="line">git remote -v <span class="comment">#详细信息</span></div><div class="line">git push origin &lt;name&gt; <span class="comment">#将该分支下的所有本地提交推送到远程库</span></div><div class="line">git checkout  -b dev origin/dev  <span class="comment">#创建远程origin的dev分支到本地</span></div><div class="line">git pull <span class="comment">#将最新的提交抓下来</span></div><div class="line">git branch --<span class="built_in">set</span>-upstream dev origin/dev <span class="comment">#设置dev和origin/dev的链接</span></div></pre></td></tr></table></figure>
 <h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">git tag &lt;tagname&gt;  <span class="comment">#打一个标签</span></div><div class="line">git tag  <span class="comment">#查看所有标签</span></div><div class="line">git tag &lt;tagname&gt; &lt;commit_id&gt; <span class="comment">#历史commit打标签</span></div><div class="line">git tag -a &lt;tagname&gt; -m <span class="string">""</span> <span class="comment"># 指定标签信息</span></div><div class="line">git show &lt;tagname&gt; <span class="comment">#查看标签信息</span></div><div class="line">git tag -d &lt;tagname&gt; <span class="comment">#删除标签</span></div><div class="line">git push origin :refs/tags/v0.9   <span class="comment">#从远程删除</span></div><div class="line">git push origin &lt;tagname&gt; <span class="comment">#推送标签到远程</span></div><div class="line">git push origin --tags <span class="comment">#可以推送全部未推送过的本地标签</span></div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -352,249 +357,38 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/02/info/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sermo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ddsermo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/02/info/" itemprop="url">开始写博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T21:48:07+08:00">
-                2017-07-02
-              </time>
+              <a href="/2017/07/02/info/" rel="next" title="开始写博客">
+                <i class="fa fa-chevron-left"></i> 开始写博客
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>开始写博客 啊啊啊啊啊</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sermo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ddsermo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/02/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T21:46:49+08:00">
-                2017-07-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/02/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -602,6 +396,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -621,8 +419,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -666,6 +473,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库"><span class="nav-number">1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改"><span class="nav-number">3.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件"><span class="nav-number">4.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加远程仓库"><span class="nav-number">5.</span> <span class="nav-text">添加远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从远程库克隆"><span class="nav-number">6.</span> <span class="nav-text">从远程库克隆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">7.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签"><span class="nav-number">8.</span> <span class="nav-text">标签</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -779,10 +602,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
