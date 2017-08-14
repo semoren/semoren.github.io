@@ -253,6 +253,118 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/ssh免密码登录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sermo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ddsermo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/14/ssh免密码登录/" itemprop="url">ssh免密码登录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T23:44:35+08:00">
+                2017-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="SSH无密码登录"><a href="#SSH无密码登录" class="headerlink" title="SSH无密码登录"></a>SSH无密码登录</h1><h2 id="机器准备"><a href="#机器准备" class="headerlink" title="机器准备"></a>机器准备</h2><h3 id="准备三台机器-Centos7"><a href="#准备三台机器-Centos7" class="headerlink" title="准备三台机器(Centos7)"></a>准备三台机器(Centos7)</h3><p>work1 192.168.162.135<br>work2 192.168.162.136<br>work3 192.168.162.137 </p>
+<h3 id="实现work1为跳转机，用来连接work2和work3服务器"><a href="#实现work1为跳转机，用来连接work2和work3服务器" class="headerlink" title="实现work1为跳转机，用来连接work2和work3服务器"></a>实现work1为跳转机，用来连接work2和work3服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">[sermo@work1 ~]$ ssh-genkey -t rsa   <span class="comment">#一路回车</span></div><div class="line">[sermo@work1 ~]$ scp .ssh/id_rsa.pub sermo@192.168.162.136:/tmp/  <span class="comment">#将公钥传送到work2机器的tmp文件夹下</span></div><div class="line"></div><div class="line">[sermo@work2 ~]$ mkdir .ssh  <span class="comment">#创建.ssh文件夹</span></div><div class="line">[sermo@work2 ~]$ cat /tmp/id_rsa.pub &gt;&gt; .ssh/authorized_keys  <span class="comment">#将work1的公钥追加到authorized_keys文件</span></div><div class="line">[sermo@work2 ~]$ chmod 700 -R .ssh/  <span class="comment">#修改.ssh文件夹权限</span></div><div class="line"></div><div class="line">[sermo@work1 ~]$ ssh 192.168.162.136   <span class="comment">#ssh work2机器无需密码即可登录</span></div><div class="line">Last login: Mon Aug 14 23:32:48 2017 from 192.168.162.135</div><div class="line"><span class="comment">#work3操作同work2</span></div><div class="line">[sermo@work1 ~]$ scp .ssh/id_rsa.pub sermo@192.168.162.137:/tmp/  <span class="comment">#将公钥传送到work2机器的tmp文件夹下</span></div><div class="line"></div><div class="line">[sermo@work3 ~]$ mkdir .ssh  <span class="comment">#创建.ssh文件夹</span></div><div class="line">[sermo@work3 ~]$ cat /tmp/id_rsa.pub &gt;&gt; .ssh/authorized_keys  <span class="comment">#将work1的公钥追加到authorized_keys文件</span></div><div class="line">[sermo@work3 ~]$ chmod 700 -R .ssh/  <span class="comment">#修改.ssh文件夹权限</span></div><div class="line">[sermo@work1 ~]$ ssh 192.168.162.137</div><div class="line">Last login: Mon Aug 14 23:25:23 2017 from 192.168.162.135</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/13/git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -637,7 +749,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -645,6 +757,15 @@
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
