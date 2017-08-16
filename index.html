@@ -272,7 +272,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/14/ssh免密码登录/" itemprop="url">ssh免密码登录</a></h1>
+                <a class="post-title-link" href="/2017/08/14/ssh免密码登录/" itemprop="url">ssh无密码登录</a></h1>
         
 
         <div class="post-meta">
@@ -332,10 +332,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[sermo@work1 ~]$ ssh-copy-id sermo@192.168.162.136</div><div class="line">[sermo@work1 ~]$ ssh 192.168.162.136</div><div class="line">Last login: Wed Aug 16 07:16:08 2017 from 192.168.162.135</div><div class="line">[sermo@work1 ~]$ ssh-copy-id sermo@192.168.162.137</div><div class="line">[sermo@work1 ~]$ ssh 192.168.162.137</div><div class="line">Last login: Wed Aug 16 07:18:26 2017 from 192.168.162.135</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>3.关闭密码登陆<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">#修改sshd_config</span></div><div class="line">[root@work2 ~]<span class="comment"># vim /etc/ssh/sshd_config </span></div><div class="line">PasswordAuthentication no  <span class="comment">#关闭密码登录</span></div><div class="line"><span class="comment">#重启SSH服务</span></div><div class="line">  <span class="comment">#centos7下的命令</span></div><div class="line">[root@work2 ~]<span class="comment"># systemctl restart sshd.service </span></div><div class="line">  <span class="comment">#centos6下的命令</span></div><div class="line">[root@work2 ~]<span class="comment"># /ect/init.d/sshd reload</span></div></pre></td></tr></table></figure></p>
-<p>4.使用ssh hostname远程登陆</p>
+<p>3.关闭密码登录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">#修改sshd_config</span></div><div class="line">[root@work2 ~]<span class="comment"># vim /etc/ssh/sshd_config </span></div><div class="line">PasswordAuthentication no  <span class="comment">#关闭密码登录</span></div><div class="line"><span class="comment">#重启SSH服务</span></div><div class="line">  <span class="comment">#centos7下的命令</span></div><div class="line">[root@work2 ~]<span class="comment"># systemctl restart sshd.service </span></div><div class="line">  <span class="comment">#centos6下的命令</span></div><div class="line">[root@work2 ~]<span class="comment"># /ect/init.d/sshd reload</span></div></pre></td></tr></table></figure></p>
+<p>4.使用ssh hostname远程登录</p>
 <ul>
-<li>修改work1服务器的hosts文件 添加work2和work3的主机ip和hostname<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@work1 ~]<span class="comment"># vim /etc/hosts</span></div><div class="line">192.168.162.136 work2</div><div class="line">192.168.162.137 work3</div><div class="line">[sermo@work1 ~]$ ssh work2</div><div class="line">Last login: Wed Aug 16 07:54:46 2017 from 192.168.162.135</div><div class="line">[sermo@work1 ~]$ ssh work3</div><div class="line">Last login: Wed Aug 16 07:55:29 2017 from 192.168.162.135</div></pre></td></tr></table></figure>
+<li><p>修改work1服务器的hosts文件 添加work2和work3的主机ip和hostname</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@work1 ~]<span class="comment"># vim /etc/hosts</span></div><div class="line">192.168.162.136 work2</div><div class="line">192.168.162.137 work3</div></pre></td></tr></table></figure>
+</li>
+<li><p>ssh hostname登录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[sermo@work1 ~]$ ssh work2</div><div class="line">Last login: Wed Aug 16 07:54:46 2017 from 192.168.162.135</div><div class="line">[sermo@work1 ~]$ ssh work3</div><div class="line">Last login: Wed Aug 16 07:55:29 2017 from 192.168.162.135</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
